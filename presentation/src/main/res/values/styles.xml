@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/background_primary</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:layout_height">@dimen/controls_height</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">@dimen/text_primary</item>
+        <item name="android:background">@color/background_secondary</item>
+        <item name="android:textColorHint">@color/text_primary</item>
+        <item name="android:padding">@dimen/text_padding</item>
+    </style>
+
+    <style name="ButtonTextStyle" parent="EditTextStyle">
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+</resources>

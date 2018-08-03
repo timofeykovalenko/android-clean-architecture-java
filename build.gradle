@@ -1,0 +1,61 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.3'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext{
+
+    // we keep  only lib version here but links in the modul gradle file
+    // to save ability to receive auto notification about new version.
+
+    compileSdkVersion = 28
+    minSdkVersion = 21
+    targetSdkVersion = 28
+
+    //View
+    supportVersion = '28.0.0-alpha3'
+    constraintVersion = '1.1.2'
+
+    //Rx
+    rxJavaVersion = '2.1.16'
+    rxAndroidVersion = '2.0.2'
+    rxRelay = '2.0.0'
+
+    //MVVM
+    archVersion = '1.1.1'
+
+    //Binding
+    bindingVersion = '3.0.0'
+
+    //Dagger
+    javaInjectVersion = '1'
+    daggerVersion = '2.16'
+
+    //Net
+    retrofitVersion = '2.4.0'
+    okHttpVersion = '3.11.0'
+}
+

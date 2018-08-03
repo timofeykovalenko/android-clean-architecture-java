@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">android-clean-architecture-java</string>
+
+    <string name="username">Username</string>
+    <string name="load_repos">Load repos</string>
+
+    <string name="error_internet_not_available">Internet is not available</string>
+    <string name="error_server_not_available">Server is not available</string>
+    <string name="error_server">Server error</string>
+    <string name="error_unexpected">Unexpected error</string>
+
+</resources>

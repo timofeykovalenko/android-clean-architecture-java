@@ -1,0 +1,25 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    //Attention, the domain layer must be independent of Android SDK and any other libraries as much as possible.
+
+    api "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation "javax.inject:javax.inject:$javaInjectVersion"
+}
