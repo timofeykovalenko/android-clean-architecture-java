@@ -10,3 +10,5 @@ It contains the functions for obtaining and storing data - network calls, databa
 
 ## Presentation module
 First of all this layer contains UI. All interactions with the user should be here. The Presentation layer communicates with the domain layer for receiving and sending data(entity). We don't have to communicate directly with the data or other layers. Additionaly it is the main module in the android app so we should set up all modules here (Providers for Injections and ect.).
+
+**The key feature of the clean architecture is the Entity. Each module has own entities, it makes each layers independent as much as possible**
