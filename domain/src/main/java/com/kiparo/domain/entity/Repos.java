@@ -1,5 +1,7 @@
 package com.kiparo.domain.entity;
 
+import java.util.Objects;
+
 public class Repos implements DomainModel {
 
     private String id;
@@ -22,5 +24,21 @@ public class Repos implements DomainModel {
 
     public String getFullName() {
         return fullName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Repos repos = (Repos) o;
+        return Objects.equals(id, repos.id) &&
+                Objects.equals(name, repos.name) &&
+                Objects.equals(fullName, repos.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, name, fullName);
     }
 }

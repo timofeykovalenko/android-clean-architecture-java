@@ -18,8 +18,15 @@ android {
 
 dependencies {
 
-    //Attention, the domain layer must be independent of Android SDK and any other libraries as much as possible.
+    //Attention, the domain layer must be independent of Android SDK(no any context here!!!)
+    //and any other libraries as much as possible.
 
+    //"api" makes this lib visible in any other modules that connected to current module
     api "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+
+    //"implementation" - lib visible and can be used only in the current module
     implementation "javax.inject:javax.inject:$javaInjectVersion"
+
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
 }

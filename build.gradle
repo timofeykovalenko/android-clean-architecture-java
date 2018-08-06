@@ -57,5 +57,9 @@ ext{
     //Net
     retrofitVersion = '2.4.0'
     okHttpVersion = '3.11.0'
+
+    //Test
+    junitVersion = '4.12'
+    mockitoVersion = '1.10.19'
 }
 
