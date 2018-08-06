@@ -7,5 +7,5 @@ import java.util.concurrent.Executor;
  * execution, but every implementation will execute the Use Case
  * out of the UI thread.
  */
-public interface WorkExecutionThread extends Executor{
+public interface WorkExecutorThread extends Executor{
 }

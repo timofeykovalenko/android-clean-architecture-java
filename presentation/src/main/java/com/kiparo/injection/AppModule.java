@@ -3,8 +3,8 @@ package com.kiparo.injection;
 import android.content.Context;
 
 import com.kiparo.app.App;
-import com.kiparo.domain.executors.PostExecutionThread;
-import com.kiparo.executor.UIThread;
+import com.kiparo.domain.executors.PostExecutorThread;
+import com.kiparo.executor.UIExecutorThread;
 
 import javax.inject.Singleton;
 
@@ -23,7 +23,7 @@ public class AppModule {
 
     @Singleton
     @Provides
-    public static PostExecutionThread provideUIThread(UIThread uiThread) {
+    public static PostExecutorThread provideUIThread(UIExecutorThread uiThread) {
         return uiThread;
     }
 }

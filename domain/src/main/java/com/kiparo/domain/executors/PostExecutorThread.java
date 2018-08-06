@@ -7,6 +7,6 @@ import io.reactivex.Scheduler;
  * Useful to encapsulate a UI Thread for example, since some job will be done in background, an
  * implementation of this interface will change context and update the UI.
  */
-public interface PostExecutionThread  {
+public interface PostExecutorThread {
     Scheduler getScheduler();
 }
