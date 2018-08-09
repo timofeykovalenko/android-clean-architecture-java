@@ -24,7 +24,7 @@ public class HomeViewModel extends BaseViewModel<HomeRouter> {
     private GetReposUseCase useCase;
 
     //Visible in xml
-    public ObservableField<String> username = new ObservableField<>(Constant.EMPTY);
+    public ObservableField<String> username = new ObservableField<>("timofeykovalenko");
     public PublishRelay<Boolean> loadReposClick = PublishRelay.create();
 
     {
@@ -65,7 +65,7 @@ public class HomeViewModel extends BaseViewModel<HomeRouter> {
 
     private void loadRepos(ReposParam param) {
 
-        showProgress();
+        showProgressWithDelay();
 
         Disposable d = useCase
                 .get(param)

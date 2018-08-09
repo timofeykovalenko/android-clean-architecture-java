@@ -15,15 +15,9 @@ import io.reactivex.functions.Function;
 import okhttp3.ResponseBody;
 import retrofit2.HttpException;
 
-public class NetTransformers<S> {
+class NetTransformers<S> {
 
-    private Gson gson;
-
-    public NetTransformers(Gson gson) {
-        this.gson = gson;
-    }
-
-    public <Entity> FlowableTransformer<Entity, Entity> parseHttpError() {
+    public static <Entity> FlowableTransformer<Entity, Entity> parseHttpError() {
 
         return new FlowableTransformer<Entity, Entity>() {
             @Override
@@ -42,19 +36,20 @@ public class NetTransformers<S> {
 
                                     ResponseBody responseBody = httpException.response().errorBody();
                                     if(responseBody != null) {
-
+                                        Gson gson = new Gson();
                                         HttpError httpError = gson.fromJson(responseBody.string(), HttpError.class);
 
                                         error = new AppError(throwable.getMessage(),
                                                 httpError.getMessage(), AppErrorType.SERVER_NORMAL_ERROR);
                                     } else {
-                                        error = new AppError("server error body is empty", AppErrorType.UNEXPECTED_ERROR);
+                                        error = new AppError("server error body is empty and " + throwable.getMessage(),
+                                                AppErrorType.UNEXPECTED_ERROR);
                                     }
                                 } else if (throwable instanceof SocketTimeoutException) {
-                                    error = new AppError("Server is not available",
+                                    error = new AppError("Server is not available and " + throwable.getMessage(),
                                             AppErrorType.SERVER_IS_NOT_AVAILABLE);
                                 } else {
-                                    error = new AppError("Unexpected error",
+                                    error = new AppError("Unexpected error and " + throwable.getMessage(),
                                             AppErrorType.UNEXPECTED_ERROR);
                                 }
 

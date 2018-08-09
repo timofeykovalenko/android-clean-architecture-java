@@ -27,6 +27,7 @@ dependencies {
     //"implementation" - lib visible and can be used only in the current module
     implementation "javax.inject:javax.inject:$javaInjectVersion"
 
+    //Tests
     testImplementation "junit:junit:$junitVersion"
     testImplementation "org.mockito:mockito-core:$mockitoVersion"
 }

@@ -28,7 +28,7 @@ task clean(type: Delete) {
 
 ext{
 
-    // we keep  only lib version here but links in the modul gradle file
+    // we keep only lib version here but links in the modul gradle file
     // to save ability to receive auto notification about new version.
 
     compileSdkVersion = 28
@@ -58,8 +58,13 @@ ext{
     retrofitVersion = '2.4.0'
     okHttpVersion = '3.11.0'
 
+    //Database
+    roomVersion = '1.1.1'
+
     //Test
     junitVersion = '4.12'
     mockitoVersion = '1.10.19'
+    mockwebserverVersion = '3.11.0'
+    supportTest = '1.0.2'
 }
 

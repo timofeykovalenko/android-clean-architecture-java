@@ -7,9 +7,9 @@ import dagger.Binds;
 import dagger.Module;
 
 @Module
-public abstract class RepositoryModule {
+public abstract class DataRepositoryModule {
 
     @Binds
-    abstract ReposRepository provideVitaldataRepository(ReposRepositoryImpl repository);
+    abstract ReposRepository provideReposRepository(ReposRepositoryImpl repository);
 
 }

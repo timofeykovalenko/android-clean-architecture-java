@@ -5,9 +5,9 @@ import io.reactivex.schedulers.TestScheduler;
 
 public class PostExecutorThreadTest implements PostExecutorThread {
 
-    private TestScheduler testScheduler;
+    private Scheduler testScheduler;
 
-    public PostExecutorThreadTest(TestScheduler testScheduler) {
+    public PostExecutorThreadTest(Scheduler testScheduler) {
         this.testScheduler = testScheduler;
     }
 

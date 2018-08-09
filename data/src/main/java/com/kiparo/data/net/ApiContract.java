@@ -8,7 +8,7 @@ import io.reactivex.Flowable;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
-interface ApiContract {
+public interface ApiContract {
 
     @GET("users/{user}/repos")
     Flowable<List<ReposResponse>> getReposByUsername(@Path("user")  String username);

@@ -21,8 +21,8 @@ public class AppModule {
         return app.getApplicationContext();
     }
 
-    @Singleton
     @Provides
+    @Singleton
     public static PostExecutorThread provideUIThread(UIExecutorThread uiThread) {
         return uiThread;
     }

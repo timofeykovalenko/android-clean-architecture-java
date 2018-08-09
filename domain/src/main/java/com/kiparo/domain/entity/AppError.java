@@ -1,5 +1,7 @@
 package com.kiparo.domain.entity;
 
+import java.util.Objects;
+
 public class AppError extends Throwable implements DomainModel {
 
     private AppErrorType type;
@@ -22,5 +24,28 @@ public class AppError extends Throwable implements DomainModel {
 
     public String getMessageForUser() {
         return messageForUser;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AppError appError = (AppError) o;
+        return type == appError.type &&
+                Objects.equals(messageForUser, appError.messageForUser);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(type, messageForUser);
+    }
+
+    @Override
+    public String toString() {
+        return "AppError{" +
+                "type=" + type +
+                ", messageForUser='" + messageForUser + '\'' +
+                '}';
     }
 }
