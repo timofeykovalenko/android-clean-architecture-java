@@ -1,5 +1,5 @@
 # android clean architecture java
-Basic concept and the skeleton of the android application with a clean architecture written on Java. Additionaly we use patterns: Repository, MVVM and Router.
+Basic concept and the skeleton of the android application with a clean architecture written on Java. Additionaly we use patterns: Repository, MVVM, Router and Room database.
 
 ## Domain module
 Independent layer, it contains **only** business logic written on java or kotlin - no dependencies from Android SDK, other modules or libs, except RxJava(Not RxAndroid!!!) and Injection because thay are very common libraries.
