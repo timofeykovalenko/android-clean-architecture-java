@@ -1,3 +1,5 @@
+# DEPRECATED
+
 # android clean architecture java
 Basic concept and the skeleton of the android application with a clean architecture written on Java. Additionaly we use patterns: Repository, MVVM, Router and Room database.
 
